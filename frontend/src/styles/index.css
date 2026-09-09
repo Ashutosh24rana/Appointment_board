@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 text-slate-900 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Inter,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+::selection {
+  background: #bfdbfe;
+}
+
+/* ---- animations ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.35s ease both;
+}
+
+.anim-pop-in {
+  animation: pop-in 0.22s ease both;
+}
+
+.anim-toast-in {
+  animation: toast-in 0.25s ease both;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e8ecf3 25%, #f4f6fa 50%, #e8ecf3 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+/* nicer date/time picker affordance */
+input[type='date'],
+input[type='time'] {
+  color-scheme: light;
+}
