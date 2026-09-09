@@ -1,0 +1,25 @@
+# ---------- env (keep templates, ignore live values) ----------
+.env
+!.env.example
+
+# ---------- python / backend ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# ---------- node / frontend ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# ---------- misc ----------
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
